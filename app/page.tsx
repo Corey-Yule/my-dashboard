@@ -1,30 +1,65 @@
 'use client';
 
-import Image from "next/image";
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import Navbar from "./components/Navbar/Navbar"
+import { Card, Button} from 'react-bootstrap';
 
 export default function Home() {
   return (
     <main>
-      <Navbar expand="lg" bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home">Dashboard</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Dashboard</Nav.Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </main>
+      <Navbar />
+      <div className="DataView" style={{display:"flex"}}>
+        <div className="Card1" style={{paddingInline:"3%"}}>
+          <Card style={{ width: '22rem' }}>
+          <Card.Img variant="top" src="holder.js/100px180" />
+          <Card.Body>
+            <Card.Title>Data Evaluation</Card.Title>
+            <Card.Text>
+              This shows how the Data-Dashboard can evaluate any data you enter, and show it
+            </Card.Text>
+            <Button variant="primary">Go somewhere</Button>
+          </Card.Body>
+          </Card>
+        </div>
+        <div className="Card2" style={{paddingInline:"3%"}}>
+          <Card style={{ width: '22rem' }}>
+          <Card.Img variant="top" src="holder.js/100px180" />
+          <Card.Body>
+            <Card.Title>Data Evaluation</Card.Title>
+            <Card.Text>
+              This shows how the Data-Dashboard can evaluate any data you enter, and show it
+            </Card.Text>
+            <Button variant="primary">Go somewhere</Button>
+          </Card.Body>
+          </Card>
+        </div>
+        <div className="Card3" style={{paddingInline:"3%"}}>
+          <Card style={{ width: '22rem' }}>
+          <Card.Img variant="top" src="holder.js/100px180" />
+          <Card.Body>
+            <Card.Title>Data Evaluation</Card.Title>
+            <Card.Text>
+              This shows how the Data-Dashboard can evaluate any data you enter, and show it
+            </Card.Text>
+            <Button variant="primary">Go somewhere</Button>
+          </Card.Body>
+          </Card>
+        </div>
+        <div className="Card4" style={{paddingInline:"3%"}}>
+          <Card style={{ width: '22rem' }}>
+          <Card.Img variant="top" src="holder.js/100px180" />
+          <Card.Body>
+            <Card.Title>Data Evaluation</Card.Title>
+            <Card.Text>
+              This shows how the Data-Dashboard can evaluate any data you enter, and show it
+            </Card.Text>
+            <Button variant="primary">Go somewhere</Button>
+          </Card.Body>
+          </Card>
+        </div>
+        
+      </div>
+      
+
+    </main> 
   );
 }
