@@ -8,7 +8,7 @@ export default function Home() {
     <main>
       <Navbar />
       <div className="DataView" style={{display:"flex"}}>
-        <div className="Card1" style={{paddingInline:"3%"}}>
+        <div className="Card1" style={{padding:"3% 2.5% 2%"}}>
           <Card style={{ width: '22rem' }}>
           <Card.Img variant="top" src="holder.js/100px180" />
           <Card.Body>
@@ -20,7 +20,7 @@ export default function Home() {
           </Card.Body>
           </Card>
         </div>
-        <div className="Card2" style={{paddingInline:"3%"}}>
+        <div className="Card2" style={{padding:"3% 2.5% 2%"}}>
           <Card style={{ width: '22rem' }}>
           <Card.Img variant="top" src="holder.js/100px180" />
           <Card.Body>
@@ -32,7 +32,7 @@ export default function Home() {
           </Card.Body>
           </Card>
         </div>
-        <div className="Card3" style={{paddingInline:"3%"}}>
+        <div className="Card3" style={{padding:"3% 2.5% 2%"}}>
           <Card style={{ width: '22rem' }}>
           <Card.Img variant="top" src="holder.js/100px180" />
           <Card.Body>
@@ -44,7 +44,7 @@ export default function Home() {
           </Card.Body>
           </Card>
         </div>
-        <div className="Card4" style={{paddingInline:"3%"}}>
+        <div className="Card4" style={{padding:"3% 2.5% 2%"}}>
           <Card style={{ width: '22rem' }}>
           <Card.Img variant="top" src="holder.js/100px180" />
           <Card.Body>

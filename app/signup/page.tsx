@@ -1,7 +1,7 @@
 'use client';
 
 import Navbar from "../components/Navbar/Navbar"
-import { Form, Card, Button, Nav} from 'react-bootstrap';
+import { Form, Card, Button, Nav, ButtonGroup} from 'react-bootstrap';
 
 
 export default function Login(){
@@ -16,9 +16,9 @@ export default function Login(){
             backgroundColor: '#121212'
           }}>
             <Card style={{ width: '25rem', padding: '2rem', backgroundColor: '#1e1e1e', color: '#fff' }}>
-              <h3 style={{ textAlign: 'center', marginBottom: '1rem' }}>Login</h3>
+              <h3 style={{ textAlign: 'center', marginBottom: '1rem' }}>Sign Up</h3>
               <Form>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Email address</Form.Label>
                   <Form.Control type="email" placeholder="Enter email" />
                 </Form.Group>
@@ -27,20 +27,14 @@ export default function Login(){
                   <Form.Label>Password</Form.Label>
                   <Form.Control type="password" placeholder="Password" />
                 </Form.Group>
-                <p style={{ textAlign: "center", marginTop: "10px" }}>
-                Don’t have an account?{" "}
-                <Nav.Link 
-                    href="/signup" 
-                    style={{ display: "inline", color: "#0d6efd", padding: 0 }}
-                >
-                    Sign up
-                </Nav.Link>
-                </p>
 
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Label>Confirm Password</Form.Label>
+                  <Form.Control type="password" placeholder="Password" />
+                </Form.Group>
 
-      
                 <Button variant="primary" type="submit" style={{ width: '100%' }}>
-                  Login
+                  Sign Up
                 </Button>
               </Form>
             </Card>
