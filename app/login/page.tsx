@@ -2,9 +2,28 @@
 
 import Navbar from "../components/Navbar/Navbar"
 import { Form, Card, Button, Nav} from 'react-bootstrap';
-
+import { useState } from "react";
+import { useRouter } from 'next/navigation';
+import { supabase } from "../utils/supabaseClient";
 
 export default function Login(){
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const router = useRouter();
+
+  const handleLogin = async () => {
+    const { error, data } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+
+    if (error) {
+      setError(error.message);
+    } else {
+      router.push('/dashboard'); // redirect after login
+    }
+  }
     return (
         <main>
             <Navbar />
@@ -39,7 +58,7 @@ export default function Login(){
 
 
       
-                <Button variant="primary" type="submit" style={{ width: '100%' }}>
+                <Button onClick={handleLogin} variant="primary" type="submit" style={{ width: '100%' }}>
                   Login
                 </Button>
               </Form>
